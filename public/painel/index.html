@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Painel — PromoJá Benefícios</title>
+<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- LOGIN -->
+  <div id="login-screen" class="login-wrap">
+    <div class="login-card">
+      <div class="brand">
+        <div class="brand-mark">PJ</div>
+        <div>
+          <h1>PromoJá</h1>
+          <p>Painel administrativo</p>
+        </div>
+      </div>
+      <form id="login-form">
+        <label>E-mail
+          <input type="email" id="email" required autocomplete="email" />
+        </label>
+        <label>Senha
+          <input type="password" id="password" required autocomplete="current-password" />
+        </label>
+        <button type="submit" id="login-btn">Entrar</button>
+        <p id="login-error" class="error"></p>
+      </form>
+      <p class="hint">Acesso restrito ao administrador master.</p>
+    </div>
+  </div>
+
+  <!-- APP -->
+  <div id="app-screen" class="app hidden">
+    <aside class="sidebar">
+      <div class="brand small">
+        <div class="brand-mark">PJ</div>
+        <div><h1>PromoJá</h1><p>Painel</p></div>
+      </div>
+      <nav>
+        <button class="nav-item active" data-tab="dashboard">📊 Dashboard</button>
+        <button class="nav-item" data-tab="usuarios">👥 Usuários</button>
+        <button class="nav-item" data-tab="categorias">🏷️ Categorias</button>
+        <button class="nav-item" data-tab="lojas">🏪 Lojas</button>
+        <button class="nav-item" data-tab="cupons">🎟️ Cupons</button>
+        <button class="nav-item" data-tab="solicitacoes">📥 Análise de Cupom</button>
+        <button class="nav-item" data-tab="lojistas">🛡️ Lojistas (Validador)</button>
+        <button class="nav-item" data-tab="notificacoes">🔔 Notificações</button>
+      </nav>
+      <button id="logout-btn" class="logout">↩ Sair</button>
+    </aside>
+    <main class="content">
+      <header class="topbar">
+        <h2 id="page-title">Dashboard</h2>
+        <span id="user-email" class="user-pill"></span>
+      </header>
+      <section id="page-content" class="page"></section>
+    </main>
+  </div>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast"></div>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-card">
+      <header><h3 id="modal-title"></h3><button id="modal-close">✕</button></header>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
