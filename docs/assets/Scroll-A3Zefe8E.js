@@ -1,0 +1,1 @@
+import{j as e}from"./index-9XFHv3nT.js";function l({children:r,className:o="",withTabBar:a=!0}){return e.jsx("div",{className:"flex-1 overflow-y-auto overflow-x-hidden "+(a?"pb-[calc(var(--tabbar-h)+24px)] ":"pb-6 ")+o,children:r})}export{l as S};
